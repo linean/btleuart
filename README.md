@@ -92,7 +92,7 @@ app build.gradle
 	}
     
 #Credentials
-In this project I'm using the Service writted by Nordic Semiconductor.
+In this project I'm using the Service written by Nordic Semiconductor.
 
       Copyright (c) 2015, Nordic Semiconductor
       All rights reserved.
