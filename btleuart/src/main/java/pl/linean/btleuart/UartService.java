@@ -189,6 +189,7 @@ public class UartService extends Service {
      *         {@code BluetoothGattCallback#onConnectionStateChange(android.bluetooth.BluetoothGatt, int, int)}
      *         callback.
      */
+    @SuppressWarnings("JavaDoc")
     public void connect(final String address) {
         if (mBluetoothAdapter == null || address == null) {
             Log.w(TAG, "BluetoothAdapter not initialized or unspecified address.");
