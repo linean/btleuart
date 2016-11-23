@@ -19,7 +19,6 @@ Sample code:
         protected void onCreate(@Nullable Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-
             //All listeners are optional
             btleUart = new BTLEUart(this)
                     .withBTLEConnectionListener(this)
