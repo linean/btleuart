@@ -1,10 +1,10 @@
 # BTLEUart: Uart connection with low energy bluetooth and Adafruit nRF8001 module (or similar)
 
-I create this library to make easier using low energy bluetooth as UART connector.
-This library allows you to connect to BTLE module, send and receive data. 
-Only requiments is +18 API and device with built in BTLE.
+I have created this library to make easier using low energy bluetooth as a UART connector.
+This library allows you to connect to a BTLE module, as well as to send and receive data. 
+The only requiments are an +18 API and a device with a built-in BTLE.
 
-Feel free to report issues or commit improvements :)
+Feel free to commit any improvements and report if any problems occur :)
 
 Sample code:
 
@@ -27,21 +27,21 @@ Sample code:
                     .init();
 
 
-            //To start connection use (only after successfull initialization)
+            //To start connection use (only after successful initialization)
             btleUart.connectDevice("Your device bluetooth MAC address");
 
-            //To stop connection use (only after successfull connection)
+            //To stop connection use (only after successful connection)
             btleUart.disconnectDevice();
 
             //When device is connected you can use
-            //IMPORTANT - with nRF8001 max message length = 20
+            //(IMPORTANT - with nRF8001 max message length = 20)
             btleUart.writeMessage("Your message to send");
 
         }
 
         @Override
         public void onBTLEInitSuccess() {
-            //Bluetooth initialization successfull, now you can make new connection
+            //Bluetooth initialization successful, now you can make new connection
         }
 
         @Override
@@ -74,7 +74,7 @@ Sample code:
     }
     
 #Usage
-Library is available by JitPack, so you can easly add it into Gradle dependencies.
+The library is available by JitPack, so you can easily add it into Gradle dependencies.
 
 root build.gradle
 
@@ -92,7 +92,7 @@ app build.gradle
 	}
     
 #Credentials
-In this project I'm using Service writted by Nordic Semiconductor.
+In this project I'm using the Service writted by Nordic Semiconductor.
 
       Copyright (c) 2015, Nordic Semiconductor
       All rights reserved.
