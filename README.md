@@ -92,7 +92,8 @@ app build.gradle
 	}
     
 #Credentials
-In this project I'm using the Service written by Nordic Semiconductor.
+In this project I'm using the Service written by Nordic Semiconductor in [Android-nRF-UART](https://github.com/NordicSemiconductor/Android-nRF-UART)
+
 
       Copyright (c) 2015, Nordic Semiconductor
       All rights reserved.
