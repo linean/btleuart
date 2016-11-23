@@ -1,0 +1,13 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.linean.btleuart">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application>
+        <service android:enabled="true" android:name="pl.linean.btleuart.UartService" />
+    </application>
+
+</manifest>
