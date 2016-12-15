@@ -274,28 +274,24 @@ public class UartService extends Service {
 
     }
 
-    public boolean writeRXCharacteristic(byte[] value) {
+    public void writeRXCharacteristic(byte[] value) {
         try {
             BluetoothGattService RxService = mBluetoothGatt.getService(RX_SERVICE_UUID);
             if (RxService == null) {
                 showMessage("Rx service not found!");
-                return false;
+                return;
             }
             BluetoothGattCharacteristic RxChar = RxService.getCharacteristic(RX_CHAR_UUID);
             if (RxChar == null) {
                 showMessage("Rx charateristic not found!");
-                return false;
+                return;
             }
             RxChar.setValue(value);
-            boolean status = mBluetoothGatt.writeCharacteristic(RxChar);
-            Log.d(TAG, "Write message success: " + status);
-
-            return status;
-
+            mBluetoothGatt.writeCharacteristic(RxChar);
+            
         } catch (NullPointerException ignored){
             Log.d(TAG, "Nullpointer in writeTx");
             disconnect();
-            return false;
         }
     }
 
