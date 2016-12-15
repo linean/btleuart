@@ -88,7 +88,7 @@ root build.gradle
 app build.gradle
 
 	dependencies {
-		compile 'com.github.linean:btleuart:1.0.0'
+		compile 'com.github.linean:btleuart:1.0.3'
 	}
     
 #Credentials
